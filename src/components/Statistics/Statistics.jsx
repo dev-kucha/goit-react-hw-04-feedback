@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
-  console.log(total);
-  console.log(positivePercentage);
   return (
     <>
       <p>Good: {good}</p>
