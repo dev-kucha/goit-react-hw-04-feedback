@@ -7,7 +7,7 @@ const Box = styled.div`
   ${layout}
   ${typography}
   ${color}
-    ${flexbox}
+  ${flexbox}
 `;
 
 const Accent = styled.span`
