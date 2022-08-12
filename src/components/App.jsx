@@ -46,17 +46,19 @@ export class App extends Component {
             onLeaveFeedback={this.handleIncrement}
           />
         </Section>
-        <Section title={'Statistics'}>
-          <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage().toFixed(
-              2
-            )}
-          />
-        </Section>
+        {this.countTotalFeedback() > 0 && (
+          <Section title={'Statistics'}>
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage().toFixed(
+                2
+              )}
+            />
+          </Section>
+        )}
       </div>
     );
   }
